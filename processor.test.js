@@ -16,6 +16,6 @@ describe("transmission processor", function() {
     });
     test("returns id as a number", function () {
         let result = processor("9701::<489584872710>");
-        expect(typeof result.id).toEqual("Number");
+        expect(typeof result.id).toEqual("number");
     });
 });
