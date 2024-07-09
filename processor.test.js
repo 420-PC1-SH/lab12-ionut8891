@@ -12,6 +12,10 @@ describe("transmission processor", function() {
     });
     test("returns id in object", function () {
         let result = processor("9701::<489584872710>");
-        expect(result.id).not.toEqual('id');
+        expect(result.id).not.toEqual(undefined);
+    });
+    test("returns id as a number", function () {
+        let result = processor("9701::<489584872710>");
+        expect(typeof result.id).toEqual("Number");
     });
 });

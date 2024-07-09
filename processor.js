@@ -4,9 +4,11 @@ function processor(transmission) {
         throw new Error('Data is invalid ; should contain "::"');
     }
     let parts = transmission.split("::");
-    let id = parseInt(parts[0], 10);
+    let id = parseInt(parts[0]);
+    let rawData = parts[1];
     return {
-        id: id
+        id: id,
+        rawData: rawData
     };
 }
 
