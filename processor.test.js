@@ -10,4 +10,8 @@ describe("transmission processor", function() {
         const expectedError = new Error('Data is invalid ; should contain "::"');
         expect(() => { processor("9701<489584872710>"); }).toThrow(expectedError);
     });
+    test("returns id in object", function () {
+        let result = processor("9701::<489584872710>");
+        expect(result).not.toEqual('id');
+    });
 });
